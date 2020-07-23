@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2020 at 01:42 PM
+-- Generation Time: Jul 23, 2020 at 06:06 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.1.25
 
@@ -57,16 +57,20 @@ CREATE TABLE `pic_tbl` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(14) NOT NULL,
   `address` text NOT NULL,
-  `company_id` varchar(50) NOT NULL
+  `company_id` varchar(50) NOT NULL,
+  `status` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pic_tbl`
 --
 
-INSERT INTO `pic_tbl` (`pic_id`, `name`, `email`, `phone`, `address`, `company_id`) VALUES
-(1, 'Febi Aris Rinaldi', 'rfebiaris@gmail.com', '089636679390', 'Surade Sukabumi Pantai Ujung Genteng Penangkaran Penyu', 'cmpy5f194bdda7287'),
-(2, 'Febi Aris Rinaldi', 'rfebiaris@gmail.com', '089636679390', 'fsdfdfdsfsdf', 'cmpy5f195f66340af');
+INSERT INTO `pic_tbl` (`pic_id`, `name`, `email`, `phone`, `address`, `company_id`, `status`) VALUES
+(1, 'Febi Aris Rinaldi', 'rfebiaris@gmail.com', '089636679390', 'Surade Sukabumi Pantai Ujung Genteng Penangkaran Penyu', 'cmpy5f194bdda7287', '1'),
+(2, 'Febi Aris Rinaldi', 'rfebiaris@gmail.com', '089636679390', 'fsdfdfdsfsdf', 'cmpy5f195f66340af', '1'),
+(3, 'Aris', 'aris@gmail.com', '089636679390', 'sukabumi', 'cmpy5f194bdda7287', '1'),
+(6, 'pit', 'pi@gmail.com', '32432943049', 'kjrkwjksdjf\r\n', 'cmpy5f195f66340af', '1'),
+(7, 'Rinaldi', 'rinaldi@gmail.com', '90842903840932', 'jfksdjf;akja;kdj', 'cmpy5f194bdda7287', '1');
 
 --
 -- Indexes for dumped tables
@@ -92,7 +96,7 @@ ALTER TABLE `pic_tbl`
 -- AUTO_INCREMENT for table `pic_tbl`
 --
 ALTER TABLE `pic_tbl`
-  MODIFY `pic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

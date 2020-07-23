@@ -12,6 +12,13 @@ class ModelCompany extends CI_Model {
     return $result;
   }
 
+  public function allPicWhere($tbl, $keyword, $valueKeyword) {
+    $sql = "SELECT * FROM $tbl WHERE $keyword = '$valueKeyword' AND status = 1";
+    $query = $this->db->query($sql);
+    $result = $query->result();
+    return $result;
+  }
+
   public function findData($tbl, $keyword, $valueKeyword) {
     $sql = "SELECT * FROM $tbl WHERE $keyword = '$valueKeyword'";
     $query = $this->db->query($sql);

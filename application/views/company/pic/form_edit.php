@@ -2,26 +2,27 @@
 
 <h3><?=$title?></h3><hr>
 
-<form action="<?=base_url()?>company/addPic/<?=$pasCompId?>" method="post" enctype="multipart/form-data" data-toggle="validator">
+<form action="<?=base_url()?>company/aksiEditPic/<?=$pic->pic_id?>" method="post" enctype="multipart/form-data" data-toggle="validator">
 
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" name="name" class="form-control" placeholder="PIC Name" required>
+    <input type="text" name="name" class="form-control" value="<?=$pic->name?>" placeholder="PIC Name" required>
+    <input type="hidden" name="company_id" class="form-control" value="<?=$pic->company_id?>" placeholder="PIC Name" required>
   </div>
 
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" name="email" class="form-control" placeholder="PIC Email" required>
+    <input type="email" name="email" class="form-control" value="<?=$pic->email?>" placeholder="PIC Email" required>
   </div>
 
   <div class="form-group">
     <label for="phone">Phone</label>
-    <input type="text" name="phone" maxlength="15" class="form-control" required oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+    <input type="text" name="phone" maxlength="15" class="form-control" value="<?=$pic->phone?>" required oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
   </div>
 
   <div class="form-group">
     <label for="address">Address</label>
-    <textarea class="form-control" name="address" rows="3" required></textarea>
+    <textarea class="form-control" name="address" rows="3" required><?=$pic->address?></textarea>
   </div>
 
   <button type="submit" class="btn btn-outline-success btn-block">Submit</button><br>
